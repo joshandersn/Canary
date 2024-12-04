@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=3 uid="uid://b782k65tpult6"]
+
+[ext_resource type="PackedScene" uid="uid://d3chpajrl24ru" path="res://Blockout/1x1.tscn" id="1_ghomd"]
+[ext_resource type="PackedScene" uid="uid://dbhbi52n0k4mo" path="res://Controller/character.tscn" id="2_h0b2g"]
+[ext_resource type="PackedScene" uid="uid://bqymmrppc4rmo" path="res://Gadgets/camera.tscn" id="3_pnt5h"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_m6cqm"]
+turbidity = 0.0
+sun_disk_scale = 26.41
+energy_multiplier = 2.51
+
+[sub_resource type="Sky" id="Sky_5igc6"]
+sky_material = SubResource("PhysicalSkyMaterial_m6cqm")
+
+[sub_resource type="Environment" id="Environment_ytpkd"]
+background_mode = 2
+sky = SubResource("Sky_5igc6")
+ssao_enabled = true
+fog_enabled = true
+fog_sky_affect = 0.177
+
+[node name="Dev1" type="Node3D"]
+
+[node name="1x1" parent="." instance=ExtResource("1_ghomd")]
+
+[node name="1x2" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="1x3" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="1x4" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+
+[node name="1x7" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="1x8" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+
+[node name="1x9" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 10)
+
+[node name="1x10" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 15)
+
+[node name="1x11" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.98707, 0, 0)
+
+[node name="1x25" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -3)
+
+[node name="1x26" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -5, 0, -3)
+
+[node name="1x27" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -9.98707, 0, -3)
+
+[node name="1x12" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 5)
+
+[node name="1x13" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 10)
+
+[node name="1x14" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 15)
+
+[node name="1x23" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -5, 0, 18)
+
+[node name="1x24" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -10, 0, 18)
+
+[node name="1x15" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -12, 0, 0)
+
+[node name="1x16" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -12, 0, 5)
+
+[node name="1x17" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -12, 0, 10)
+
+[node name="1x18" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -12, 0, 15)
+
+[node name="1x19" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="1x20" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 2, 0, 5)
+
+[node name="1x21" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 2, 0, 10)
+
+[node name="1x22" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 2, 0, 15)
+
+[node name="1x5" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 18)
+
+[node name="1x6" parent="." instance=ExtResource("1_ghomd")]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, -0.0310111, 10.0235)
+
+[node name="Character" parent="." instance=ExtResource("2_h0b2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.255876, 1.65932, -1.15862)
+
+[node name="CameraOrigin" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_pnt5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.526453, 0.0500002, 1.15078)
+current = true
+target = NodePath("../Character")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ytpkd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.43263, 0.900684, 0.0399865, 0.0982673, -0.0911961, 0.990973, 0.8962, -0.424795, -0.127962, -0.190121, 0, 0)
+light_energy = 2.567
+shadow_enabled = true

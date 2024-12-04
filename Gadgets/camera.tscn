@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqymmrppc4rmo"]
+
+[ext_resource type="Script" path="res://Gadgets/camera.gd" id="1_u5wt8"]
+[ext_resource type="Script" path="res://States/rotation.gd" id="2_rwgg0"]
+
+[node name="CameraOrigin" type="Node3D"]
+script = ExtResource("1_u5wt8")
+
+[node name="Neck" type="SpringArm3D" parent="."]
+
+[node name="Camera" type="Camera3D" parent="Neck"]
+
+[node name="Rotation" type="Node" parent="."]
+script = ExtResource("2_rwgg0")

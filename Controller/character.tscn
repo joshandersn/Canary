@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbhbi52n0k4mo"]
+
+[ext_resource type="Script" path="res://Controller/character.gd" id="1_3glkk"]
+[ext_resource type="Script" path="res://States/movement.gd" id="2_osqog"]
+[ext_resource type="Script" path="res://Controller/jump.gd" id="3_ut27d"]
+[ext_resource type="ArrayMesh" uid="uid://c7sajd47wwg2p" path="res://Assets/player_mesh.res" id="4_yn07u"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_e4qkm"]
+friction = 0.1
+bounce = 0.3
+
+[sub_resource type="BoxMesh" id="BoxMesh_stxp2"]
+size = Vector3(0.1, 1, 0.1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0noeb"]
+radius = 0.2
+height = 0.638856
+
+[node name="Character" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 3
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_e4qkm")
+linear_damp = 3.0
+script = ExtResource("1_3glkk")
+
+[node name="Movement" type="Node" parent="."]
+script = ExtResource("2_osqog")
+
+[node name="Jump" type="Node" parent="."]
+script = ExtResource("3_ut27d")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.521269, 0, 0)
+visible = false
+mesh = SubResource("BoxMesh_stxp2")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-09, 0, -0.1, 0, 0.1, 0, 0.1, 0, -4.37114e-09, 0, 0, 0)
+mesh = ExtResource("4_yn07u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_0noeb")
