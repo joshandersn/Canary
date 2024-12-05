@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://4fb6pbgvto0w"]
+
+[ext_resource type="Texture2D" uid="uid://b3ld84fs3jka8" path="res://Assets/Textures/grid3.png" id="1_l1dvo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1gcbd"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vydkw"]
+albedo_color = Color(0, 1, 1, 1)
+albedo_texture = ExtResource("1_l1dvo")
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_eaps1"]
+size = Vector3(3, 0.2, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x2obb"]
+size = Vector3(3, 0.2, 3)
+
+[node name="block" type="StaticBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_1gcbd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_vydkw")
+mesh = SubResource("BoxMesh_eaps1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_x2obb")

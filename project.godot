@@ -67,3 +67,4 @@ jump={
 
 3d_physics/layer_1="enviornment"
 3d_physics/layer_2="character"
+3d_physics/layer_3="object"

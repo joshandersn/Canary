@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://b782k65tpult6"]
+[gd_scene load_steps=11 format=3 uid="uid://b782k65tpult6"]
 
 [ext_resource type="PackedScene" uid="uid://d3chpajrl24ru" path="res://Blockout/1x1.tscn" id="1_ghomd"]
 [ext_resource type="PackedScene" uid="uid://dbhbi52n0k4mo" path="res://Controller/character.tscn" id="2_h0b2g"]
 [ext_resource type="PackedScene" uid="uid://bqymmrppc4rmo" path="res://Gadgets/camera.tscn" id="3_pnt5h"]
+[ext_resource type="PackedScene" uid="uid://g513nfsibjqj" path="res://Blockout/block.tscn" id="4_c7ibq"]
+[ext_resource type="PackedScene" uid="uid://ddhcbn1lm1lxf" path="res://Blockout/box.tscn" id="5_aobys"]
+[ext_resource type="PackedScene" uid="uid://b2plceels700r" path="res://Blockout/plank.tscn" id="6_an1pm"]
+[ext_resource type="PackedScene" uid="uid://4fb6pbgvto0w" path="res://Blockout/trampoline.tscn" id="7_qvdsy"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_m6cqm"]
 turbidity = 0.0
@@ -18,6 +22,9 @@ sky = SubResource("Sky_5igc6")
 ssao_enabled = true
 fog_enabled = true
 fog_sky_affect = 0.177
+adjustment_enabled = true
+adjustment_brightness = 0.86
+adjustment_contrast = 1.49
 
 [node name="Dev1" type="Node3D"]
 
@@ -114,5 +121,42 @@ environment = SubResource("Environment_ytpkd")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.43263, 0.900684, 0.0399865, 0.0982673, -0.0911961, 0.990973, 0.8962, -0.424795, -0.127962, -0.190121, 0, 0)
-light_energy = 2.567
+light_energy = 5.536
 shadow_enabled = true
+
+[node name="block" parent="." instance=ExtResource("4_c7ibq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86767, 0.05, 1.17441)
+
+[node name="block2" parent="." instance=ExtResource("4_c7ibq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86946, 0.784352, 5.02088)
+
+[node name="block3" parent="." instance=ExtResource("4_c7ibq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86946, 2.64787, 8.64143)
+
+[node name="block4" parent="." instance=ExtResource("4_c7ibq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.89811, 4.10854, 12.2243)
+
+[node name="block5" parent="." instance=ExtResource("5_aobys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.690687, 0.864196, 8.37172)
+
+[node name="block6" parent="." instance=ExtResource("5_aobys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.690687, 2.22702, 8.37172)
+
+[node name="block7" parent="." instance=ExtResource("5_aobys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.690687, 3.59755, 8.37172)
+
+[node name="block8" parent="." instance=ExtResource("5_aobys")]
+transform = Transform3D(1, 0, 0, 0, 0.999885, 0.0151663, 0, -0.0151663, 0.999885, -3.6913, 2.5167, 5.28076)
+
+[node name="block9" parent="." instance=ExtResource("6_an1pm")]
+transform = Transform3D(0.604655, 0, 0.796488, 0, 1, 0, -0.796488, 0, 0.604655, -3.69535, 3.10557, 5.22814)
+
+[node name="block10" parent="." instance=ExtResource("6_an1pm")]
+transform = Transform3D(-0.55016, 0, 0.835059, 0, 1, 0, -0.835059, 0, -0.55016, -3.86665, 1.18913, 0.919741)
+mass = 0.001
+
+[node name="block11" parent="." instance=ExtResource("5_aobys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28658, 0.677225, 0.933553)
+
+[node name="block12" parent="." instance=ExtResource("7_qvdsy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.922793, 0.0500002, 5.02435)

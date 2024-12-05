@@ -9,10 +9,10 @@ extends Node
 
 func _ready() -> void:
 	new_ray.target_position.y = -jump_ray_length
+	new_ray.set_collision_mask_value(3, true)
 	add_sibling.call_deferred(new_ray)
 
 func _input(event: InputEvent) -> void:
 	if enabled:
 		if Input.is_action_just_pressed("jump") and new_ray.is_colliding():
-			print("jump")
 			parent.apply_force(jump_direction)

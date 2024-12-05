@@ -27,7 +27,8 @@ func _physics_process(delta: float) -> void:
 				var camera_dir = input_direction.rotated(Vector3.UP, v_rot)
 				parent.apply_force(camera_dir * movement_speed)
 				var velocity = parent.linear_velocity.normalized()
-				parent.global_rotation.y = lerp_angle(parent.rotation.y, atan2(-velocity.z, velocity.x), delta * 30) 
+				if velocity.length() > 0.9:
+					parent.global_rotation.y = lerp_angle(parent.rotation.y, atan2(-velocity.z, velocity.x), delta * 30) 
 		else:
 			input_direction.x = Input.get_axis("move_backward", "move_forward")
 			input_direction.z = Input.get_axis("move_left","move_right")
