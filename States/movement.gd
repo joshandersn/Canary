@@ -7,9 +7,6 @@ extends Node
 @onready var parent = get_parent()
 var input_direction: Vector3
 
-func _input(event: InputEvent) -> void:
-	pass
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if !(parent is RigidBody3D):
